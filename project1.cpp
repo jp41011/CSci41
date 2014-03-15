@@ -1,7 +1,7 @@
 // Juan Pedraza
 // CSCI 41 - Project 1
 #include "SLL.h"
-//#include "DLL.h"
+#include "DLL.h"
 #include <iostream>
 
 using namespace std;
@@ -9,6 +9,7 @@ using namespace std;
 int main()
 {
 	// part 1 - Singly Linked List
+	/*
 	SLL list1;
 	list1.print();
 	list1.pushBack('A');
@@ -34,9 +35,21 @@ int main()
 	cout << list1.findkthNodeFromBack(6) << endl;
 	cout << "1st from back: ";
 	cout << list1.findkthNodeFromBack(1) << endl;
-
+	*/
 	// part 2 - Doubly Linked List
-	
+	DLL list2;
+	list2.insertInOrder('c');
+	list2.insertInOrder('a');
+	//list2.insertInOrder('a');
+	//list2.insertInOrder('e');
+	//list2.insertInOrder('d');
+	list2.print();
 
+	char c, d = 'D';
+	cin >> c;
+	if(c > d)
+		cout << "Greater" << endl;
+	else
+		cout << "Less" << endl;
 	return 0;
 }
