@@ -1,0 +1,25 @@
+juan@juan-Ubuntu:~/bitBucket/csci41$ ./project1 
+Juan Pedraza CSCI 41
+--------- Part 1 ---------
+List: 
+List: A B C D 
+Duplicate
+List: A A B B C C D D 
+DeleteDuplicate
+List: A B C D 
+Added E and F
+List: A B C D E F 
+7th from back: k greater than size of list
+~
+3rd from back: D
+6th from back: A
+1st from back: F
+--------- Part 2 ---------
+Dlist: A A B C C D E F 
+Delete 1th node
+Delete 3th node
+Dlist: A B C D E F 
+Shift 2 spaces to the left
+Dlist: C D E F A B 
+juan@juan-Ubuntu:~/bitBucket/csci41$ 
+
