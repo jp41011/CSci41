@@ -1,3 +1,5 @@
+// Juan Pedraza
+// CSCI 41 - Lab 6
 #include <iostream>
 #include <stdlib.h> //generate random number
 #include <vector>
@@ -18,10 +20,16 @@ int main()
 	cout << vec0; // print out vector using overloaded operator
 	vector<short int> vec1(vec0); // copy of vector vec0
 	vector<short int> vec2(vec0); // copy vec0
-	selectionSort(vec1);
-	cout << vec1;
-	insertionSort(vec2);
-
+	vector<short int> vec3(vec0); // for shell sort
+	cout << "Selection Sort: ";
+	selectionSort(vec1); // call selection sort
+	cout << vec1; // print vector after selection sort
+	cout << "Insertion Sort: ";
+	insertionSort(vec2); // call insertion sort
+	cout << vec2; // print vector
+	cout << "Shell Sort:\t";
+	shellSort(vec3);
+	cout << vec3;
 	char ch;
 	cout << "Redo: r\tExit: e" << endl;
 	cin >> ch;
