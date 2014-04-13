@@ -4,6 +4,7 @@ Implementation of merge sort and quick sort
 */
 #include <iostream>
 #include <stdlib.h> // rand()
+#include <time.h> // for srand(time(NULL))
 #include <vector>
 #include "sorts.cpp"
 using namespace std;
@@ -19,10 +20,12 @@ ostream& operator << (ostream& out, vector<short>& vec)
 
 int main()
 {
+	cout << "time: " << time(NULL) << endl;
 	unsigned short nums = 0;
 	cout << "How many random numbers: ";
 	cin >> nums;
 	vector<short int> vec0 (0);
+	srand(time(NULL));
 	for(unsigned short i=0; i<nums; i++)
 		vec0.push_back(rand()%2000 - 1000);
 
