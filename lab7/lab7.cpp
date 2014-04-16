@@ -20,7 +20,7 @@ ostream& operator << (ostream& out, vector<short>& vec)
 
 int main()
 {
-	cout << "time: " << time(NULL) << endl;
+	//cout << "time: " << time(NULL) << endl;
 	unsigned short nums = 0;
 	cout << "How many random numbers: ";
 	cin >> nums;

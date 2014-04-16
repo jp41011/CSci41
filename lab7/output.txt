@@ -1,0 +1,25 @@
+How many random numbers: 5
+Random numbers: -26 -911 132 23 -258 
+Merge Sort: -911 -258 -26 23 132 
+Quick Sort: -911 -258 -26 23 132 
+Redo: r	Exit: e
+r
+How many random numbers: 7
+Random numbers: 979 991 303 586 4 540 -830 
+Merge Sort: -830 4 303 540 586 979 991 
+Quick Sort: -830 4 303 540 586 979 991 
+Redo: r	Exit: e
+r
+How many random numbers: 11
+Random numbers: 170 -80 -490 542 -522 207 726 322 418 501 -427 
+Merge Sort: -522 -490 -427 -80 170 207 322 418 501 542 726 
+Quick Sort: -522 -490 -427 -80 170 207 322 418 501 542 726 
+Redo: r	Exit: e
+r
+How many random numbers: 17
+Random numbers: 732 237 -951 -274 -783 -961 -15 364 870 916 -665 305 -327 -293 305 842 366 
+Merge Sort: -961 -951 -783 -665 -327 -293 -274 -15 237 305 305 364 366 732 842 870 916 
+Quick Sort: -961 -951 -783 -665 -327 -293 -274 -15 237 305 305 364 366 732 842 870 916 
+Redo: r	Exit: e
+e
+
