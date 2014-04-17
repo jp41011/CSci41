@@ -1,35 +1,46 @@
-#include "BookStore.cpp"
+#include "Portal.h"
+#include "BookStore.h"
+#include "Sorts.h"
+#include <iostream>
 
-class Portal
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
+
+Portal::Portal(){portalName = "Portal";}
+Portal::Portal(string newName){portalName = newName;}
+
+Portal::~Portal(){books.resize(0);}
+
+void Portal::addBookStore(BookStore bookstore)
 {
-private:
-	string name;
-
-public:
-	vector<Book> books;
-	// constructors
-	Portal(){name = "PortalName";}
-	Portal(string newName){name = newName;}
-	
-	~Portal(){ } //TODO
-
-	// addBookStore will gather all the books from all the bookstores
-	void addBookStore(BookStore bookStore)
+	for(int i=0; i < bookstore.books.size(); i++)
 	{
-		//TODO
+		books.push_back(bookstore.books[i]);
 	}
+}
 
-	//searchCheapestBook will return pointer to cheapest book
-	// and print out book info
-	Book* searchCheapestBook(string bookName)
+Book* Portal::searchCheapestBook(string bookTitle)
+{
+	vector<Book> sortedPrice = sortPrice(books);
+	for(int i=0; i < books.size(); i++)
 	{
-		//TODO
+		if(sortedPrice[i].getName() == bookTitle)
+		{
+			Book* cheapestBook = &sortedPrice[i];
+			cheapestBook->info();
+			return cheapestBook;
+		}
 	}
+}
 
-	// prints out all the books in the portal in alphabetic order
-	// and the number of items that are duplicate
-	void print()
+void Portal::print()
+{
+	vector<Book> sortedAlpha = sortByName(books);
+	for(int i=0; i<sortedAlpha.size(); i++)
 	{
-		//TODO
+		cout << "Book " << i+1 << ": ";
+		sortedAlpha[i].info();
 	}
-};
+}

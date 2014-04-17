@@ -1,37 +1,57 @@
-#include <vector>
-#include "Book.cpp"
-#include "Sorts.cpp"
+#include "BookStore.h"
+#include "Book.h"
+#include "Sorts.h"
+#include <iostream>
 
-class BookStore
+using std::string;
+using std::vector;
+
+// constructors
+BookStore::BookStore(){bookStoreName = "BookStore";}
+BookStore::BookStore(string newName){bookStoreName = newName;}
+
+BookStore::~BookStore(){books.resize(0);}
+
+// add book to the set of books in this book store
+void BookStore::addBook(Book b)
 {
-private:
-	string name;
+	b.setStore(bookStoreName);
+	books.push_back(b);
+}
 
-public:
-	vector<Book> books;
-	// constructors
-	BookStore(){name = "BookStore";}
-	BookStore(string newName){name = newName;}
-	
-	~BookStore(){ } //TODO
+// Returns all books sorted by publish year newest to oldest
+vector<Book> BookStore::getBooks()
+{
+	vector<Book> sortedBooks = sortByYear(books);
+	return sortedBooks;
+}
 
-	// add a book to bookstore
-	void addBook(Book b){books.push_back(b);}
-	
-	// returns a vector of books sorted based on publish year newest to oldest
-	vector<Book> getBooks()
+vector<Book> BookStore::sortByPrice()
+{
+	vector<Book> sortedBooks = sortPrice(books);
+	return sortedBooks;
+}
+
+// returns  a copy of the oldest book in the store
+Book BookStore::oldestBook()
+{
+	if(books.empty() == true)
 	{
-		//TODO
+		std::cout << "Book Store: " << bookStoreName << " is empty." << std::endl;
+		Book empty = Book("empty", "empty", 0, 0, "empty");
+		return empty;
 	}
-
-	// returns vector<Book> sorted by price - lowest to highest
-	vector<Book> sortByPrice()
+	int oldestYear = books[0].getPublishYear();
+	unsigned int oldestIndex = 0;  
+	for(unsigned int i=1; i < books.size(); i++)
 	{
-		//TODO
+		if(books[i].getPublishYear() < oldestYear)
+		{
+			oldestYear = books[i].getPublishYear();
+			oldestIndex = i;
+		}
 	}
+	return books[oldestIndex];
+}
 
-	Book oldestBook()
-	{
-		//TODO
-	}
-};
+string BookStore::getName(){return bookStoreName;}
