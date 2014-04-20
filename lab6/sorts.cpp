@@ -78,7 +78,6 @@ void shellSort(vector<short> & vec)
 			vec[j] = temp;
 		}
 	}
-
 }
 
 // overloading the << operator to print out vector. same as print(vector<short> & vec) { ... }
