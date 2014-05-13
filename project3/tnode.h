@@ -13,6 +13,7 @@ public:
 
 	tnode();
 	tnode(char v);
+	tnode(tnode* p, char v);
 	tnode(tnode* p, char v, tnode* l, tnode* r);
 	~tnode();
 	
