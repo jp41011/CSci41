@@ -1,0 +1,33 @@
+juan@juan-Ubuntu:~/bitBucket/csci41/project3$ ./project3 
+	-		
+		+		*		
+		a		/		2		+		
+		*		d		e		3		
+		b		c		
+	
+Look up: -	Level: 0
+Look up: a	Level: 2
+Look up: 3	Level: 3
+Look up: c	Level: 4
+Is Binary Tree: TRUE
+Alphabetic var count: 5
+	-		
+		+		*		
+		4		/		2		+		
+		*		7		8		3		
+		5		6		
+	
+PreOrder:	- + 4 / * 5 6 7 * 2 + 8 3 
+InOrder:	4 + 5 * 6 / 7 - 2 * 8 + 3 
+PostOrder:	4 5 6 * 7 / + 2 8 3 + * - 
+Compute Result: -14
+Is complete tree: False
+---------- TESTING with Complete Tree ----------
+	A		
+		B		C		
+		D		E		F		G		
+		H		
+	
+Complete tree: True
+juan@juan-Ubuntu:~/bitBucket/csci41/project3$ 
+
